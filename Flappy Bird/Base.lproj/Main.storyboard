@@ -9,26 +9,38 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="GameViewController" customModule="Flappy_Bird" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" id="Ppd-a8-vmK">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" id="Ppd-a8-vmK">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Q9j-LL-Dpc" appends="YES" id="Tlr-mr-RyG"/>
                                 </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird" id="m8y-sW-Sqo">
-                                <rect key="frame" x="148" y="9" width="25" height="25"/>
+                                <rect key="frame" x="94" y="127" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipeBottom" id="kww-2A-RsP">
+                                <rect key="frame" x="526" y="188" width="26" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipeTop" id="u1S-bL-gb8">
+                                <rect key="frame" x="526" y="-49" width="26" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="bird" destination="m8y-sW-Sqo" id="8Sp-TF-VIE"/>
+                        <outlet property="bottomPipe" destination="kww-2A-RsP" id="7nE-Z5-BCc"/>
+                        <outlet property="topPipe" destination="u1S-bL-gb8" id="NpX-dT-c71"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -38,12 +50,14 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="359.73333333333335"/>
+            <point key="canvasLocation" x="162" y="359"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg" width="144" height="256"/>
         <image name="bird" width="25" height="25"/>
+        <image name="pipeBottom" width="26" height="160"/>
+        <image name="pipeTop" width="26" height="160"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
