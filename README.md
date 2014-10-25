@@ -6,7 +6,7 @@ Time Spent: 2 hours and counting...
 
 Completed User Stories:
 * [x]	Tapping on the screen should push the bird up, otherwise it will fall.
-* [-]	Pipes of random heights should be moving across the screen.
+* [x]	Pipes of random heights should be moving across the screen.
 * [ ]	The bird colliding with the pipes should end the game.
 
 Notes:
