@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E63B33AC19FB347C007E545E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63B33AB19FB347C007E545E /* AppDelegate.swift */; };
-		E63B33AE19FB347C007E545E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63B33AD19FB347C007E545E /* ViewController.swift */; };
 		E63B33B119FB347C007E545E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E63B33AF19FB347C007E545E /* Main.storyboard */; };
 		E63B33B319FB347C007E545E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E63B33B219FB347C007E545E /* Images.xcassets */; };
 		E63B33B619FB347C007E545E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63B33B419FB347C007E545E /* LaunchScreen.xib */; };
 		E63B33C219FB347C007E545E /* Flappy_BirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63B33C119FB347C007E545E /* Flappy_BirdTests.swift */; };
+		E63B33CC19FB3917007E545E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63B33CB19FB3917007E545E /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		E63B33A619FB347C007E545E /* Flappy Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63B33AA19FB347C007E545E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E63B33AB19FB347C007E545E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E63B33AD19FB347C007E545E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E63B33B019FB347C007E545E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E63B33B219FB347C007E545E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E63B33B519FB347C007E545E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E63B33BB19FB347C007E545E /* Flappy BirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flappy BirdTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63B33C019FB347C007E545E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E63B33C119FB347C007E545E /* Flappy_BirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_BirdTests.swift; sourceTree = "<group>"; };
+		E63B33CB19FB3917007E545E /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				E63B33AB19FB347C007E545E /* AppDelegate.swift */,
-				E63B33AD19FB347C007E545E /* ViewController.swift */,
 				E63B33AF19FB347C007E545E /* Main.storyboard */,
+				E63B33CB19FB3917007E545E /* GameViewController.swift */,
 				E63B33B219FB347C007E545E /* Images.xcassets */,
 				E63B33B419FB347C007E545E /* LaunchScreen.xib */,
 				E63B33A919FB347C007E545E /* Supporting Files */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63B33AE19FB347C007E545E /* ViewController.swift in Sources */,
+				E63B33CC19FB3917007E545E /* GameViewController.swift in Sources */,
 				E63B33AC19FB347C007E545E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
