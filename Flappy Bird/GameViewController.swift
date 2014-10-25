@@ -8,10 +8,11 @@
 
 import UIKit
 
-private let kTouchVelocity = CGPoint(x: 0, y: -320)
-private let kPipeDistance = 100
+private let kTouchVelocity = CGPoint(x: 0, y: -250)
+private let kPipeDistance : CGFloat = 75
 private let kPipeSpacing = 100
-private let kPipeVelocity = CGPoint(x: -100, y: 0)
+private let kPipeVelocity = CGPoint(x: -50, y: 0)
+private let kPipeTimeInterval : NSTimeInterval = 2
 
 class GameViewController: UIViewController {
     
@@ -32,6 +33,7 @@ class GameViewController: UIViewController {
         
         pipes.append(topPipe)
         pipes.append(bottomPipe)
+        bottomPipe.frame.origin.y = topPipe.frame.maxY + kPipeDistance
         
         animator = UIDynamicAnimator(referenceView: view)
         
@@ -44,15 +46,42 @@ class GameViewController: UIViewController {
         birdItemBehavior.addLinearVelocity(kTouchVelocity, forItem: bird)
         animator.addBehavior(birdItemBehavior)
 
-//        collisionBehavior = UICollisionBehavior(items: [bird])
-//        collisionBehavior.delete(self)
-//        animator.addBehavior(collisionBehavior)
-        
         pipeItemBehavior = UIDynamicItemBehavior(items: pipes)
         pipeItemBehavior.addLinearVelocity(kPipeVelocity, forItem: topPipe)
         pipeItemBehavior.addLinearVelocity(kPipeVelocity, forItem: bottomPipe)
         animator.addBehavior(pipeItemBehavior)
+        
+//        collisionBehavior = UICollisionBehavior(items: [bird])
+//        collisionBehavior.delete(self)
+//        animator.addBehavior(collisionBehavior)
+        
+        NSTimer.scheduledTimerWithTimeInterval(kPipeTimeInterval, target: self, selector: "addPipes:", userInfo: nil, repeats: true)
     }
+    
+    func addPipes(timer: NSTimer) {
+        println("adding")
+        
+        var topPipe = UIImageView(image: self.topPipe.image)
+        var bottomPipe = UIImageView(image: self.bottomPipe.image)
+        
+        view.addSubview(topPipe)
+        view.addSubview(bottomPipe)
+        
+        var screenSize = UIScreen.mainScreen().bounds.size
+        // Randomly place bottom of top pipe between pipe.height & kPipeDistance
+        var pipeOffset = CGFloat(arc4random()) % (topPipe.frame.height - kPipeDistance) + kPipeDistance
+        
+        topPipe.frame.origin = CGPoint(x: screenSize.width, y: pipeOffset - topPipe.frame.height)
+        bottomPipe.frame.origin = CGPoint(x: screenSize.width, y: pipeOffset + kPipeDistance)
+        
+        println(topPipe.frame.origin)
+        
+        pipeItemBehavior.addItem(topPipe)
+        pipeItemBehavior.addItem(bottomPipe)
+        
+        pipeItemBehavior.addLinearVelocity(kPipeVelocity, forItem: topPipe)
+        pipeItemBehavior.addLinearVelocity(kPipeVelocity, forItem: bottomPipe)
+        }
     
     @IBAction func onTap(sender: UITapGestureRecognizer) {
         var velocity = birdItemBehavior.linearVelocityForItem(bird)

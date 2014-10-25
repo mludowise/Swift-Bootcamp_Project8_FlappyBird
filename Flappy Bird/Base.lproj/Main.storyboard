@@ -25,11 +25,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipeBottom" id="kww-2A-RsP">
-                                <rect key="frame" x="526" y="188" width="26" height="160"/>
+                                <rect key="frame" x="572" y="185" width="26" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipeTop" id="u1S-bL-gb8">
-                                <rect key="frame" x="526" y="-49" width="26" height="160"/>
+                                <rect key="frame" x="572" y="-25" width="26" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
